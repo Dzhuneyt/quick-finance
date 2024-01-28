@@ -78,7 +78,7 @@ const TotalReturnToYearlyReturn = () => {
         },
     });
 
-    return <Container>
+    return <div>
         <Box mx="auto">
             <form onSubmit={form.onSubmit((values) => {
                 console.log(values)
@@ -127,7 +127,7 @@ const TotalReturnToYearlyReturn = () => {
                 valueAtPeriodStart={form.values.valueAtPeriodStart}
                 valueAtPeriodEnd={form.values.valueAtPeriodEnd}/>
         </Box>
-    </Container>
+    </div>
 }
 
 export default TotalReturnToYearlyReturn;
