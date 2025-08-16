@@ -43,7 +43,7 @@ export function NavbarNested() {
     const links = mockdata.map((item) => <LinksGroup {...item} key={item.label}/>);
 
     return (
-        <Box component={'nav'} className={classes.navbar} p={'md'} w={'300px'} h={'100vh'}>
+        <Box component={'nav'} className={classes.navbar}>
             <ScrollArea className={classes.links}>
                 <div>{links}</div>
             </ScrollArea>
