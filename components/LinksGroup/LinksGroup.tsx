@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {Box, Collapse, Group, rem, Text, ThemeIcon, UnstyledButton} from '@mantine/core';
 import {IconChevronRight} from '@tabler/icons-react';
+import Link from 'next/link';
 import classes from './LinksGroup.module.css';
 
 interface LinksGroupProps {
@@ -14,15 +15,11 @@ export const LinksGroup = ({icon: Icon, label, initiallyOpened, links}: LinksGro
     const hasLinks = Array.isArray(links);
     const [opened, setOpened] = useState(initiallyOpened || false);
     const items = (hasLinks ? links : []).map((link) => (
-        <Text<'a'>
-            component="a"
-            className={classes.link}
-            href={link.link}
-            key={link.label}
-            onClick={(event) => event.preventDefault()}
-        >
-            {link.label}
-        </Text>
+        <Link key={link.label} href={link.link} style={{ textDecoration: 'none' }}>
+            <Text className={classes.link}>
+                {link.label}
+            </Text>
+        </Link>
     ));
 
     return (
