@@ -6,37 +6,72 @@ import {
     IconLock,
     IconNotes,
     IconPresentationAnalytics,
+    IconCalculator,
+    IconTrendingUp,
+    IconCreditCard,
+    IconBuildingBank,
+    IconShield,
+    IconChartPie,
 } from '@tabler/icons-react';
 import classes from './Navigation.module.css';
 import {LinksGroup} from "../LinksGroup/LinksGroup";
 
 const mockdata = [
     {
-        label: 'Financial Calculators',
-        icon: IconNotes,
+        label: 'Investment Calculators',
+        icon: IconTrendingUp,
         initiallyOpened: true,
         links: [
             {label: 'Average Yearly Return', link: '/total-return-to-yearly-return'},
+            {label: 'Compound Interest Calculator', link: '/compound-interest'},
+            {label: 'Investment Portfolio Analyzer', link: '/portfolio-analyzer'},
+            {label: 'Dollar Cost Averaging', link: '/dollar-cost-averaging'},
+            {label: 'Retirement Savings Calculator', link: '/retirement-savings'},
+            {label: 'Investment Return Calculator', link: '/investment-return'},
         ],
     },
-    // {
-    //     label: 'Releases',
-    //     icon: IconCalendarStats,
-    //     links: [
-    //         {label: 'Upcoming releases', link: '/'},
-    //         {label: 'Previous releases', link: '/'},
-    //         {label: 'Releases schedule', link: '/'},
-    //     ],
-    // },
-    // {
-    //     label: 'Security',
-    //     icon: IconLock,
-    //     links: [
-    //         {label: 'Enable 2FA', link: '/'},
-    //         {label: 'Change password', link: '/'},
-    //         {label: 'Recovery codes', link: '/'},
-    //     ],
-    // },
+    {
+        label: 'Loan & Debt Calculators',
+        icon: IconCreditCard,
+        initiallyOpened: false,
+        links: [
+            {label: 'Mortgage Calculator', link: '/mortgage-calculator'},
+            {label: 'Loan Amortization', link: '/loan-amortization'},
+            {label: 'Debt Payoff Calculator', link: '/debt-payoff'},
+            {label: 'Credit Card Payoff', link: '/credit-card-payoff'},
+        ],
+    },
+    {
+        label: 'Business & Planning',
+        icon: IconBuildingBank,
+        initiallyOpened: false,
+        links: [
+            {label: 'Break-Even Analysis', link: '/break-even'},
+            {label: 'Net Present Value (NPV)', link: '/npv-calculator'},
+            {label: 'Internal Rate of Return (IRR)', link: '/irr-calculator'},
+            {label: 'Cash Flow Calculator', link: '/cash-flow'},
+        ],
+    },
+    {
+        label: 'Tax & Inflation',
+        icon: IconCalculator,
+        initiallyOpened: false,
+        links: [
+            {label: 'Tax Equivalent Yield', link: '/tax-equivalent-yield'},
+            {label: 'Inflation Calculator', link: '/inflation-calculator'},
+            {label: 'Real Return Calculator', link: '/real-return'},
+        ],
+    },
+    {
+        label: 'Risk & Insurance',
+        icon: IconShield,
+        initiallyOpened: false,
+        links: [
+            {label: 'Risk Tolerance Calculator', link: '/risk-tolerance'},
+            {label: 'Life Insurance Needs', link: '/life-insurance-needs'},
+            {label: 'Emergency Fund Calculator', link: '/emergency-fund'},
+        ],
+    },
 ];
 
 export function NavbarNested() {
